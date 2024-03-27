@@ -1,0 +1,111 @@
+:root {
+    --montserrat: "Montserrat", sans-serif;
+    --frauces: "Fraunces", serif;
+    --darkCian: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --darkBlue: hsl(212, 21%, 14%);
+    --darkGrayish: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, ::before, ::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+body {
+    font-size: 16px;
+    background-color: var(--cream);
+    font-family: var(--montserrat);
+    height: 100vh;
+    display: flex;
+}
+.container {
+    max-width: 90%;
+    width: 60rem;
+    margin: auto;
+    padding: auto 3rem;
+    background-color: var(--white);
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.6rem 2rem rgb(0 0 0 / 20%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container__img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/image-product-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container__tag {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--darkGrayish);
+    font-size: 1.2rem;
+}
+.container__texts {
+    padding: 2rem;
+}
+.details__title {
+    font-size: 3.5rem;
+    margin: 2.5rem auto;
+    font-family: var(--frauces);
+    line-height: 1;
+}
+.details__text {
+    line-height: 1.7;
+    color: var(--darkGrayish);
+    font-size: 1.4rem;
+}
+.details__price {
+    color: var(--darkCian);
+    font-family: var(--frauces);
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 2.5rem auto;
+    display: flex;
+}
+.details__price--small {
+    display: inline-block;
+    color: var(--darkGrayish);
+    font-family: var(--montserrat);
+    font-size: 1.5rem;
+    align-items: flex-start;
+    text-decoration: line-through;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+.cta {
+    display: inline-block;
+    background-color: var(--darkCian);
+    text-decoration: none;
+    text-align: center;
+    color: var(--white);
+    border-radius: .5rem;
+    width: 100%;
+    padding: 1.5rem 4rem;
+}
+.cta:hover {
+    background-color: hsl(159, 40%, 17%);
+}
+
+/*media queries*/
+@media (max-width: 478px) {
+    .container {
+        width: 90%;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .container__img {
+        width: 100%;
+        background-image: url(../img/image-product-mobile.jpg);
+        background-position: top center;
+    }
+}
